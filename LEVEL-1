@@ -1,0 +1,191 @@
+
+CSS Purpose: The primary role of CSS is to add style to websites. For instance, if HTML provides the basic layout or structure of a webpage (like the framework of a house), CSS is responsible for its styling, beauty, and 'makeup', such as setting paint colours, sofa colours, and the size of lamps.
+CSS Importance Demonstration: Without CSS, a website like Netflix would appear broken and unstyled, with elements scattered and colours missing, highlighting the crucial role CSS plays in visual presentation.
+◦
+Code Editor: For writing code, a code editor like Visual Studio (VS) Code is used.
+◦
+Web Technologies Overview: Web development typically involves three core languages: HTML (for structure), CSS (for styling), and JavaScript (for logic and interactivity, like making lights turn on/off with a switch).
+•
+Basic CSS Syntax & Adding Styles
+◦
+CSS Syntax: CSS code follows a basic syntax: a selector (e.g., h1) followed by curly braces {}, which contain property-value pairs (e.g., color: red;). The statement typically ends with a semicolon (;).
+◦
+Inline Styling: Styles can be applied directly within an HTML tag using the style attribute.
+▪
+Example: To change an h1 heading's colour to red, you can write <h1 style="color: red;">Hello From Apna College</h1>. This can then be changed to green by updating the style attribute to color: green;.
+◦
+Internal Styling (Style Tag): Styles can be written within a <style> tag placed in the <head> section of an HTML file.
+▪
+Example: To make all h1 headings red, you can add <style> h1 { color: red; } </style> within your HTML's <head>.
+◦
+External Stylesheet: This is the professional and preferred method, where CSS is written in a separate .css file (e.g., style.css) and linked to the HTML file.
+▪
+Example: To link style.css to index.html, you add <link rel="stylesheet" href="style.css"> in the HTML <head>. Styles defined in style.css, such as h1 { color: green; }, will then apply to your HTML.
+◦
+Style Priority: When multiple styles conflict, inline styles have the highest priority, followed by styles defined in the <style> tag, and then by external stylesheets (if they are declared later in the HTML).
+•
+Colour & Background Colour Properties
+◦
+color Property: Used to set the foreground colour of elements, such as text, buttons, or links.
+▪
+Example: Setting the h1 text colour to green.
+▪
+Example: Changing paragraph text colour to purple, then red.
+▪
+Example: Setting button text colour to brown.
+◦
+background-color Property: Used to set the background colour of elements.
+▪
+Example: Setting the entire body background colour to black.
+▪
+Example: Changing a button's background colour to green.
+▪
+Example: A button can have both its text (color) and background (background-color) styled simultaneously by selecting the button and defining both properties within its CSS rules.
+•
+Colour Systems (RGB & Hexadecimal)
+◦
+RGB (Red, Green, Blue): Colours are defined by mixing red, green, and blue light, with each component having a value from 0 to 255.
+▪
+Example: rgb(255, 0, 0) produces red.
+▪
+Example: rgb(0, 255, 0) produces green.
+▪
+Example: rgb(255, 255, 0) produces yellow (mix of full red and full green).
+◦
+Hexadecimal (Hex): A shorter way to represent RGB colours, using hexadecimal values (00-FF) for each colour channel. Hex codes are prefixed with a hash (#).
+▪
+Example: #FF0000 produces red.
+▪
+Example: #00FF00 produces green.
+▪
+Example: #FFFF00 produces yellow.
+▪
+Example: Online tools like Coolors or Canva can be used to generate and pick exact hex codes for colour palettes.
+•
+CSS Selectors
+◦
+Universal Selector (*): Selects and applies styles to all elements in the HTML document.
+▪
+Example: * { color: pink; } will make all text on the page pink.
+◦
+Element Selector: Selects and applies styles to all instances of a specific HTML tag.
+▪
+Example: h1 { color: green; } will make all h1 headings green.
+◦
+ID Selector (#): Selects a single, unique HTML element by its id attribute.
+▪
+Example: If an h1 has id="headingOne", then #headingOne { color: yellow; } will specifically colour that h1 yellow.
+◦
+Class Selector (.): Selects and applies styles to multiple HTML elements that share the same class attribute.
+▪
+Example: If multiple elements have class="myClass", then .myClass { color: magenta; } will colour all of them magenta.
+•
+Practice Set 1
+◦
+Question 1: Creating a simple div with text and setting its background-color to blue using an ID selector.
+◦
+Question 2: Creating h1, h2, and h3 headings, assigning them the same class (heading), and setting their color to red. It also demonstrates that multiple element selectors can be grouped with commas (e.g., h1, h2, h3 { color: red; }) to apply the same style.
+◦
+Question 3: Demonstrates the priority of different styling methods by setting a button's background-color first with an external stylesheet (green), then with an internal style tag (blue), and finally with inline styling (pink).
+•
+Text Properties
+◦
+text-align: Controls the horizontal alignment of text. Possible values include left, right, center, start, and end.
+▪
+Example: A paragraph's text can be aligned to the right, then left, or center. An h1 heading can also be right- or center-aligned.
+◦
+text-decoration: Used to add or remove lines from text. Common values are underline, overline, line-through, and none.
+▪
+Example: An h1 heading can be given an underline, an overline, or a line-through.
+▪
+Common Use Case: To remove the default underline from anchor tags (<a>), you can set text-decoration: none;.
+▪
+Advanced: You can specify text-decoration-color (e.g., blue) and text-decoration-style (e.g., wavy, dotted, double, dashed).
+◦
+font-weight: Sets the boldness or lightness of text. Values include normal, bold, bolder, lighter, or numerical values from 100 (lightest) to 900 (darkest).
+▪
+Example: An h1 heading can be set to normal font weight, while an h3 can be lighter. Different headings can be assigned numerical font weights like 100, 250, 400 (default bold), and 900 to show varying degrees of thickness.
+◦
+font-family: Determines the font style of the text.
+▪
+Example: A paragraph's font can be changed to Arial, and another to Segoe UI. You can also specify multiple font families as a fallback mechanism.
+•
+Units in CSS & Text Transform
+◦
+Absolute Units (Pixels): px (pixels) is the most commonly used absolute unit, defining a fixed size.
+▪
+font-size Property: Controls the size of text.
+•
+Example: Setting a paragraph's font-size to 25px makes it larger, 10px makes it smaller, and 1px makes it almost invisible.
+◦
+line-height Property: Determines the vertical spacing between lines of text.
+▪
+Example: Setting line-height to 2px causes lines to be squashed and overlap, while 50px adds significant space between lines.
+◦
+text-transform Property: Used to change the casing of text. Values include uppercase, lowercase, capitalize (first letter of each word capital), and none.
+▪
+Example: A paragraph's text can be transformed to uppercase, then lowercase, or capitalize.
+•
+Practice Set 2
+◦
+Question 1: Creating an h1 heading that is centered on the page and has all its text capitalized.
+◦
+Question 2: Setting the font-family of all content in the document to "Times New Roman" using the universal selector (*).
+◦
+Question 3: Creating a div inside another div, where the outer div's text size is 25px and the inner div's text size is 10px, demonstrating how some properties are inherited.
+
+/* Practice Set 1 */
+/* Question 1: Simple div with blue background using ID selector */
+#myDiv {
+    background-color: blue;
+    color: white; /* To make text visible */
+    padding: 20px;
+}
+
+/* Question 2: h1, h2, h3 headings with class "heading" colored red */
+.heading {
+    color: red;
+}
+
+/* Question 3: Button background color styles showing priority */
+
+/* External stylesheet style.css */
+button {
+    background-color: green;
+}
+
+/* Internal style tag (overrides external) */
+button {
+    background-color: blue;
+}
+
+/* Inline style (overrides internal and external) is set in HTML tag:
+<button style="background-color: pink;">Click Me</button>
+*/
+
+/* Practice Set 2 */
+/* Question 1: h1 heading centered and text capitalized */
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Question 2: Universal selector to set font-family to Times New Roman */
+* {
+    font-family: "Times New Roman", serif;
+}
+
+/* Question 3: Nested divs with font sizes differing */
+.outer {
+    font-size: 25px;
+    background-color: lightgray; /* Optional: visualize outer div */
+    padding: 20px;
+}
+
+.inner {
+    font-size: 10px;
+    background-color: lightblue; /* Optional: visualize inner div */
+    padding: 10px; today i started learning css give description for post on linked in 
+}
+
+
