@@ -1,0 +1,168 @@
+Level 2 of the "CSS  Beginners" focuses on the **Box Model in CSS**. This level introduces how all elements on a webpage, such as images, `div`s, `span`s, headings, paragraphs, and buttons, are ultimately contained within boxes. The tutorial emphasizes that inspecting elements is crucial for understanding and manipulating CSS, especially for the Box Model.
+
+### Box Model in CSS
+
+The Box Model in CSS visualizes any content displayed on a webpage as being confined within a box. This model consists of several key components:
+*   **Content:** The actual content of the element, such as text or images. Its dimensions are defined by `height` and `width`.
+*   **Padding:** The extra space around the content, between the content and its border.
+*   **Border:** A boundary that encloses the content and its padding.
+*   **Margin:** The extra space outside the border, between one box and another.
+
+These five terms (content, height, width, padding, border, margin) are fundamental to understanding the Box Model.
+
+#### Height Property
+The `height` property sets the vertical area an element occupies. By default, a `div`'s height is determined by the height of its content. However, you can explicitly set it using pixel values (e.g., `height: 50px;` or `height: 100px;`). Applying a background color helps visualize the set height.
+
+#### Width Property
+Similar to `height`, the `width` property sets the horizontal area an element occupies. By default, a `div` typically occupies the entire width of its parent. You can set it using pixel values (e.g., `width: 100px;` or `width: 200px;`).
+
+#### Border Property
+The `border` properties are used to set the boundary around an element's content area. Three main properties are involved:
+1.  **`border-width`**: Determines the thickness of the border (e.g., `2px`, `5px`, `10px`).
+2.  **`border-style`**: Defines the appearance of the border, such as `solid` (most common), `dotted`, `dashed`, or `double`. By default, borders are black.
+3.  **`border-color`**: Sets the color of the border.
+
+The tutorial demonstrates setting these for a `div` and an `h1` heading, noting that `text-align` aligns content relative to its *own* box, not necessarily the entire document, when height and width are set.
+
+#### Border Shorthand
+To write `border-width`, `border-style`, and `border-color` in a single line, a shorthand `border` property can be used. The format is `border: <width> <style> <color>;` (e.g., `border: 2px solid brown;`).
+
+#### Border Radius
+The `border-radius` property is used to round the corners of an element's border.
+*   It can be set using pixel values (e.g., `border-radius: 5px;` or `border-radius: 15px;`). Larger values create more rounded corners.
+*   For square-shaped boxes (equal height and width), setting `border-radius: 50%;` will create a perfect circle. This is the primary method for creating circles in CSS.
+
+#### Padding Property
+`padding` creates space between an element's content area and its border.
+*   It can be applied to specific sides: `padding-left`, `padding-right`, `padding-top`, `padding-bottom`.
+*   Values are typically set in pixels (e.g., `padding-left: 25px;`).
+*   Padding is highlighted in green when inspecting elements in Chrome.
+
+#### Padding Shorthand
+The `padding` shorthand allows setting padding for all sides or individual sides in a single line.
+*   A single value applies to all four sides (e.g., `padding: 25px;`).
+*   Four values apply to top, right, bottom, and left respectively, in a clockwise format (e.g., `padding: 1px 2px 3px 4px;`).
+
+#### Margin Property
+`margin` creates space *outside* an element's border, separating it from other elements.
+*   Like padding, it can be applied to specific sides: `margin-left`, `margin-right`, `margin-top`, `margin-bottom`.
+*   Values are typically set in pixels (e.g., `margin-top: 50px;`).
+*   Margin is highlighted in orange when inspecting elements in Chrome.
+
+#### Margin Shorthand
+The `margin` shorthand works similarly to padding, allowing a single value for all sides or four values in a clockwise format (top, right, bottom, left).
+
+### Practice Set 3
+
+Level 2 includes Practice Set 3 to reinforce the concepts:
+
+1.  **Create a `div` with a circular shape**: This involves setting a specific height and width (e.g., `100px` each), a background color, and then applying `border-radius: 50%;` to make it circular. The tutorial also briefly demonstrates how to apply a border from only one side (e.g., `border-top`, `border-bottom`, `border-left`) which is useful for creating loader animations later.
+2.  **Create a Navigation Bar (Navbar)**: This task involves creating a basic navigation bar layout, demonstrating the application of background colors, specific heights, and strategic use of margins to create spacing between elements. The `border-radius` and hover effects on borders are also applied to elements like the Amazon logo and input fields. The tutorial also shows how to remove default underlines from anchor tags using `text-decoration: none;`.
+
+Level 2 concludes by emphasizing the importance of a clear understanding of these core CSS properties for web development.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Circular Box</title>
+  <style>
+    .circle {
+      height: 100px;
+      width: 100px;
+      background-color: #4CAF50;
+      border-radius: 50%;
+      border-top: 5px solid #333;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="circle"></div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Navbar</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+      background-color: #232f3e;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-right: 40px;
+      border: 2px solid white;
+      padding: 5px 10px;
+      border-radius: 10px;
+      transition: border-color 0.3s;
+    }
+
+    .logo:hover {
+      border-color: orange;
+    }
+
+    .search-bar {
+      flex-grow: 1;
+      margin-right: 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#" class="logo">Amazon</a>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Cart</a>
+      <a href="#">Profile</a>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
