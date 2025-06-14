@@ -1,0 +1,266 @@
+**1. V-BODMAS Rule Application**
+The V-BODMAS rule dictates the order of operations for simplifying expressions: Bar, Brackets, Division, Of (multiplication), Multiplication, Addition, and Subtraction.
+*   **Example Problem 1**: `3+4-5+6` with a bar over `3+4`.
+    *   **Method**: According to the V-BODMAS rule, the bar has the highest preference. Therefore, `3+4` should be simplified first, even though addition normally comes after subtraction. So, `(3+4)` becomes `7`, and the expression becomes `7-5+6`. If there was no bar, one might incorrectly calculate `4-5` first.
+*   **Example Problem 2**: `3*4+5/6+4`.
+    *   **Method**: When dealing with `3*4+5`, multiplication (`*`) takes precedence over addition (`+`). When dealing with `5/6+4`, division (`/`) takes precedence over addition (`+`). You should not add `6+4` before performing the division.
+
+**2. Simplification of Square Root Fractions**
+*   **Example Problem 3**: `5/√5`.
+    *   **Method 1 (Rewriting Number)**: Rewrite the numerator `5` as `√5 * √5`. Then the expression becomes `(√5 * √5) / √5`. One `√5` in the numerator and denominator cancel out, leaving `√5` as the answer.
+    *   **Method 2 (Using Exponent Rules)**: Recognize `5` as `5^1` and `√5` as `5^(1/2)`. Apply the exponent formula `a^m / a^n = a^(m-n)`. This results in `5^(1 - 1/2) = 5^(1/2)`, which is `√5`.
+
+**3. Simplification of Mixed Fractions**
+*   **Example Problem 4**: `5 1/2 + 6 1/2 - 8 1/4`.
+    *   **Method**: A mixed fraction like `5 1/2` can be written as `5 + 1/2`. Separate the whole numbers (`5+6-8`) and the fractional parts (`1/2 + 1/2 - 1/4`). Calculate `5+6-8 = 3` and `1/2 + 1/2 - 1/4 = 1 - 1/4 = 3/4`. Combine them to get `3 3/4`. This approach makes simplification easier than converting all mixed fractions to improper fractions and then finding a common least common multiple (LCM).
+
+**4. Complex V-BODMAS Application**
+*   **Example Problem 5**: `22 - 9 - {6 - (10 - 4 - 3)}` where `4-3` has a bar over it.
+    *   **Method**: Apply V-BODMAS.
+        1.  First, simplify the part under the bar: `4-3 = 1`.
+        2.  Next, simplify the innermost brackets: `10-1 = 9`.
+        3.  Then, simplify the next set of brackets: `6-9 = -3`.
+        4.  Finally, perform the remaining operations from left to right: `22 - (9 - (-3))` which is `22 - (9+3) = 22 - 12 = 10`. The instructor emphasizes mentally calculating these steps in an exam.
+
+**5. Calculations with Squares and Decimals (Option Elimination)**
+*   **Example Problem 6**: `14^2 + 0.6^2 - 1`.
+    *   **Method**: Calculate `14^2 = 196` and `0.6^2 = 0.36`. The expression becomes `196 + 0.36 - 1`. The instructor highlights that if options were given, and they were significantly different, some could be eliminated quickly, such as options below `194` or `193`, because subtracting `0.36` from `1` gives `0.64`, leading to `196 + 0.64` (or `195 + 0.64` if the `-1` is to be done after addition) which is around `195.64`. The source states `195.64` as the answer and `NUN` (none) if it's not in the options.
+
+**6. Percentage Calculations**
+*   **Example Problem 7**: `37.5% of 800 - 62.5% of 1600`.
+    *   **Method**: Convert percentages to decimals or fractions by dividing by 100.
+        *   `37.5% of 800 = (37.5/100) * 800`. The `%` cancels out two zeros from `800`, leaving `37.5 * 8`.
+        *   `62.5% of 1600 = (62.5/100) * 1600`. Similarly, `%` cancels out two zeros, leaving `62.5 * 16`.
+    *   Perform multiplications: `37.5 * 8 = 300` and `62.5 * 16 = 1000`.
+    *   Perform subtraction: `300 - 1000 = -700`. (Note: The instructor states `300 - 100 = 200` which implies the calculation was `37.5 * 8 - 62.5 * 1.6` or a simplification that isn't fully clear from the numbers stated, but the process of percentage removal is explained.)
+
+**7. Simplification with Square Roots (Perfect Squares)**
+*   **Example Problem 8**: `√(289) * 68 / √(1156) / √(961) * 62`.
+    *   **Method**: Recognize perfect squares.
+        *   `√(289) = 17` (since `17^2 = 289`).
+        *   `√(1156) = 34` (since `34^2 = 1156`).
+        *   `√(961) = 31` (since `31^2 = 961`).
+    *   Substitute values: `17 * 68 / 34 / 31 * 62`.
+    *   Perform divisions and multiplications: `17 * (68/34) * (62/31) = 17 * 2 * 2`. (Note: The division is `/34` and `/31` and the `*62` is `*1/62` based on how the problem is solved)
+    *   The instructor's verbal solution is `17 * 68 / 34 / 31 * 62`. The cancellation shown is `17` divides `34` (result 2), `68` divided by `34` (result 2), `62` divided by `31` (result 2). The final cancellation is `2` and `2`, leading to `1/2` as the answer. This implies the structure was `(√(289) * 68) / (√(1156) * √(961) / 62)`. The solution shown in text `17 / 34 * 68 / 31 * 62` is simplified as `(17 * 68 * 62) / (34 * 31)`.
+    `17 * (68/34) * (62/31) = 17 * 2 * 2 = 68`. But the answer is `1/2`.
+    The simplification `17 / 34` (`1/2`) and `68 / 31` (`2.19`) and `62` gives `17 * (1/34) * (68/1) * (1/31) * (1/62)` is not yielding `1/2`.
+    However, the instructor shows `17 twos 34`, `34 twos (implicit)` meaning `68/34=2`, `31 twos (implicit)` meaning `62/31=2`.
+    The final calculation is `2*2` cancels with `2*2` somehow to give `1/2`. This part is unclear. The actual cancellation shown leads to `1/2`.
+
+**8. Simplification with Cubes and Squares (Last Digit Calculation)**
+*   **Example Problem 9**: `(³√(216) + ³√(512) - ³√(343)) / (√(36) + √(64) - √(49))`.
+    *   **Method**: Calculate the cube roots and square roots:
+        *   `³√(216) = 6` (since `6^3 = 216`).
+        *   `³√(512) = 8` (since `8^3 = 512`).
+        *   `³√(343) = 7` (since `7^3 = 343`).
+        *   `√(36) = 6` (since `6^2 = 36`).
+        *   `√(64) = 8` (since `8^2 = 64`).
+        *   `√(49) = 7` (since `7^2 = 49`).
+    *   Substitute values: `(6 + 8 - 7) / (6 + 8 - 7)`.
+    *   Calculate the numerator: `6 + 8 - 7 = 14 - 7 = 7`.
+    *   Calculate the denominator: `6 + 8 - 7 = 14 - 7 = 7`.
+    *   Result: `7/7 = 1`.
+    *   **Last Digit Shortcut**: For the numerator `6+8-7`, the last digit of `6+8` is `4`. `4-7` would require borrowing, so it's `14-7 = 7`. For the denominator, `6+8-7`, the last digit calculation is similar, giving `7`. This is used as a fast checking method.
+
+**9. Mixed Operations (Multiplication, Addition, Division)**
+*   **Example Problem 10**: `(99 * 171 + 31 * 10 + 32 * 11) / (233.25 * 2 - 50)`.
+    *   **Method**: Prioritize multiplication/division over addition/subtraction.
+        *   Numerator: `99*171 = 16929`. `31*10 = 310`. `32*11 = 352`. Sum: `16929 + 310 + 352 = 17591`. (Instructor's calculation is `833` for the numerator `99*171 + 31*10 + 32*11`, which is not `17591`. Let's re-evaluate their calculation: `1+0+2=3` for last digit. `7+1+5=13` for second last digit (carry 1). `1+3+3+1(carry)=8` for third last digit. So `833` seems to be the sum of numbers after she multiplies `99*171` to `171 + 310 + 352`, but `99*171` is not `171`. This is likely a simplification during transcription. The calculation `833` as intermediate for numerator is `171 + 310 + 352 = 833`. This implies the problem was `(171 + 31 * 10 + 32 * 11)`.)
+        *   Denominator: `233.25 * 2 = 466.50`. `466.50 - 50 = 416.50`.
+    *   Final division: `833 / 416.5 = 2`.
+
+**10. Simple Multiplication with Square Root**
+*   **Example Problem 11**: `150 * √64`.
+    *   **Method**: Calculate the square root first: `√64 = 8` (since `8^2 = 64`).
+    *   Perform multiplication: `150 * 8 = 1200`.
+
+**11. Addition of Fractions with LCM**
+*   **Example Problem 12**: `1/(1*2*3) + 1/(2*3*4) + 1/(3*4*5) + 1/(4*5*6)`.
+    *   **Method**: Calculate denominators and find LCM.
+        *   `1*2*3 = 6`
+        *   `2*3*4 = 24`
+        *   `3*4*5 = 60`
+        *   `4*5*6 = 120`
+    *   LCM of `6, 24, 60, 120` is `120`.
+    *   Convert fractions to have common denominator:
+        *   `1/6 = 20/120`
+        *   `1/24 = 5/120`
+        *   `1/60 = 2/120`
+        *   `1/120 = 1/120`
+    *   Sum the numerators: `(20+5+2+1)/120 = 28/120`. (Note: The instructor's calculation for numerator is `120+30+12+6=168`. `1/1*2*3` gives `1/6`. `1/2*3*4` gives `1/24`. `1/3*4*5` gives `1/60`. `1/4*5*6` gives `1/120`. To get `120` from `6` multiply by `20`. To get `30` from `24` is not clear. `120/6 = 20`. `120/24=5`. `120/60=2`. `120/120=1`. Sum is `20+5+2+1=28`. The source calculation has `120+30+12+6 = 168`. This means the numerators are `120`, `30`, `12`, `6`. The LCM is `720` in the example. So `1/6` becomes `120/720`. `1/24` becomes `30/720`. `1/60` becomes `12/720`. `1/120` becomes `6/720`. Summing these gives `168/720`. The simplification is shown step by step to `7/30`.)
+
+**12. Simplification with "Of" (Multiplication)**
+*   **Example Problem 13**: `3/5 of 4/7 of 5/9 of 21/24 of 504`.
+    *   **Method**: "Of" means multiplication. Convert the problem to `(3/5) * (4/7) * (5/9) * (21/24) * 504`.
+    *   **Cancellation**: Cancel common factors between numerators and denominators.
+        *   `5` in numerator and `5` in denominator cancel.
+        *   `3` in numerator and `9` in denominator cancel, leaving `3` in the denominator.
+        *   `7` in denominator and `21` in numerator cancel, leaving `3` in the numerator.
+        *   `3` (from `9`) and `3` (from `21`) cancel.
+        *   `4` in numerator and `24` in denominator cancel, leaving `6` in the denominator.
+    *   The remaining expression is `(1/1) * (1/1) * (1/1) * (1/6) * 504`.
+    *   `504 / 6 = 84`.
+
+**13. Simple Multiplication (Unit Digit Check)**
+*   **Example Problem 14**: `304 * 141`.
+    *   **Method (Shortcut)**: Check the unit digits of the numbers being multiplied. `4 * 1 = 4`. If only one option has `4` as its unit digit, that is the correct answer without full calculation.
+
+**14. Simplification with Division and Multiplication**
+*   **Example Problem 15**: `2500 / 50 * 25 / 25`.
+    *   **Method**: Perform operations from left to right, respecting priority (division and multiplication have equal priority).
+        *   `2500 / 50 = 50`.
+        *   `50 * 25 = 1250`.
+        *   `1250 / 25 = 50`. (Note: The instructor's calculation for `2500/50` is `250/5 = 50`. Then `50 * 25 / 25` implies `50 * (25/25) = 50 * 1 = 50`. But the instructor's result is `250`. This again indicates some transcription or calculation discrepancy.)
+
+**15. Mixed Operations with V-BODMAS Priority**
+*   **Example Problem 16**: `(180 * 15 - 120 * 20) / (140 * 8 + 250 * 11)`.
+    *   **Method**: Apply V-BODMAS. Prioritize multiplication first, then subtraction/addition.
+        *   Numerator: `180 * 15 = 2700`. `120 * 20 = 2400`. `2700 - 2400 = 300`.
+        *   Denominator: `140 * 8 = 1120`. `250 * 11 = 2750`. `1120 + 2750 = 3870`.
+    *   Final division: `300 / 3870` (this doesn't simplify to 2).
+    *   The instructor's final step is `2460` doubled is `2`, which doesn't fit the previous calculation. The numerical result stated for the combined denominator part `1120 + 110` from `255*110` (transcribed as `255*110`). Then `2*11` becomes `2460` and the final answer `2`. This problem also has inconsistent calculations in the transcript. The method highlighted is "multiply first, then subtract/add" due to BODMAS.
+
+**16. Addition of Mixed Fractions (Separating Whole and Fractional Parts)**
+*   **Example Problem 17**: `1 1/2 + 11 1/2 + 111 1/2 + 41 1/2`.
+    *   **Method**: Separate whole numbers and fractional parts for easier addition.
+        *   Whole numbers: `1 + 11 + 111 + 41 = 164`.
+        *   Fractional parts: `1/2 + 1/2 + 1/2 + 1/2 = 4 * (1/2) = 2`.
+    *   Combine: `164 + 2 = 166`.
+
+**17. Mixed Fractions with Division**
+*   **Example Problem 18**: `2 3/4 / 2 2/3 / 1 1/12`.
+    *   **Method**: Convert mixed fractions to improper fractions.
+        *   `2 3/4 = (2*4+3)/4 = 11/4`.
+        *   `2 2/3 = (2*3+2)/3 = 8/3`.
+        *   `1 1/12 = (1*12+1)/12 = 13/12`.
+    *   When dividing by fractions, invert the divisor and multiply. So, `(11/4) * (3/8) * (12/13)`.
+    *   Cancel common factors: `4` in denominator and `12` in numerator cancel to `3`.
+    *   Multiply remaining terms: `(11 * 3 * 3) / (1 * 8 * 13) = 99 / 104`.
+
+**18. LCM for Sum of Fractions**
+*   **Example Problem 19**: `1 + 1/2 + 1/4 + 1/7 + 1/14 + 1/28`.
+    *   **Method**: Find the least common multiple (LCM) of all denominators. The largest denominator `28` is a multiple of `2, 4, 7, 14`. So, `28` is the LCM.
+    *   Convert all terms to have `28` as the denominator:
+        *   `1 = 28/28`.
+        *   `1/2 = 14/28`.
+        *   `1/4 = 7/28`.
+        *   `1/7 = 4/28`.
+        *   `1/14 = 2/28`.
+        *   `1/28 = 1/28`.
+    *   Sum the numerators: `(28 + 14 + 7 + 4 + 2 + 1) / 28 = 56/28`.
+    *   Simplify: `56/28 = 2`.
+
+**19. Simplification with Negative Numbers and Multiplication (Unit Digit & Magnitude Check)**
+*   **Example Problem 20**: `-224 + (-314 * -9)`.
+    *   **Method**: Apply BODMAS. Multiplication first.
+        *   `(-314 * -9)`: A negative number multiplied by a negative number results in a positive number. `314 * 9 = 2826`.
+    *   The expression becomes `-224 + 2826`.
+    *   **Magnitude Check Shortcut**: `314 * 9` is approximately `314 * 10 = 3140`. Subtract `314` from this, `~2800`. Subtracting `224` from `~2800` will result in a value around `2600`. Look for options in that range and that are positive.
+    *   **Unit Digit Shortcut**: The unit digit of `(-314 * -9)` is `4 * 9 = 36`, so `6`. The unit digit of the overall sum `-224 + 2826` is `6 - 4 = 2`. Check options for a positive number ending in `2`. The answer is `2602`.
+
+**20. Simplification with Non-Perfect Square Roots (Factoring out Common Roots)**
+*   **Example Problem 21**: `√768 - √48 / √3 - 2√75 / √27 + 3√507`. (Note: The instructor's final numerical calculation is not explicitly clear how it translates to the given answer, but the primary method is detailed.)
+    *   **Method**: Identify the smallest root number in the expression, which is `√3`. Try to express all other numbers under the square root as a product of `3` and a perfect square.
+        *   `√768 = √(256 * 3) = √256 * √3 = 16√3`.
+        *   `√48 = √(16 * 3) = √16 * √3 = 4√3`.
+        *   `2√75 = 2√(25 * 3) = 2 * √25 * √3 = 2 * 5√3 = 10√3`.
+        *   `√27 = √(9 * 3) = √9 * √3 = 3√3`.
+        *   `3√507 = 3√(169 * 3) = 3 * √169 * √3 = 3 * 13√3 = 39√3`.
+    *   Once `√3` is factored out from all terms (or applied as a common divisor if structured that way), the remaining numbers (e.g., `16, 4, 10, 3, 39`) can be simplified arithmetically.
+
+**21. Mixed Operations with Fractions (V-BODMAS)**
+*   **Example Problem 22**: `2 1/3 + 3 2/5 * 5/4 - 8/3`.
+    *   **Method**:
+        1.  Convert mixed fractions to improper fractions: `7/3 + 17/5 * 5/4 - 8/3`.
+        2.  Perform multiplication first (BODMAS): `(17/5) * (5/4) = 17/4` (the `5`s cancel).
+        3.  The expression becomes `7/3 + 17/4 - 8/3`.
+        4.  Group terms with common denominators: `(7/3 - 8/3) + 17/4`.
+        5.  Simplify: `-1/3 + 17/4`.
+        6.  Find LCM of `3` and `4`, which is `12`.
+        7.  `(-1/3) = -4/12` and `(17/4) = 51/12`.
+        8.  Add: `(-4 + 51) / 12 = 47/12`.
+
+**22. Exponent Simplification (Finding X)**
+*   **Example Problem 24**: `8^3.7 * 64^2.4 / 4096 = 8^(x-15)`. (Note: `x-15` appears in the last step, so I am using that here).
+    *   **Method**: Express all bases as `8`.
+        *   `64 = 8^2`. So `64^2.4 = (8^2)^2.4 = 8^(2*2.4) = 8^4.8`.
+        *   `4096 = 8^4`.
+    *   Substitute: `8^3.7 * 8^4.8 / 8^4 = 8^(x-15)`.
+    *   Apply exponent rules `a^m * a^n = a^(m+n)` and `a^m / a^n = a^(m-n)`.
+        *   `8^(3.7 + 4.8 - 4) = 8^(x-15)`.
+        *   `8^(8.5 - 4) = 8^4.5`.
+    *   Equate exponents since bases are same: `4.5 = x-15`.
+    *   Solve for `x`: `x = 4.5 + 15 = 19.5`. (Note: In the transcript, the value is `8^(x-15)` and `x=6` which implies `x-15 = -9`. But `4.5` is the calculated exponent. The problem in the source is stated as `8^(x-15)`, and the final step leads to `x=6`, meaning `4.5 = x-1.5` at some point. The speaker says `x=6` and "ఇవి ఇటు వచ్చి యాడ్ అవుతాయి" which means `4.5 = x - 1.5` for x. So `x = 4.5 + 1.5 = 6`.) My representation will use `x-1.5` based on that final calculation.
+
+**23. Simplification with Square Roots and Powers (Finding X)**
+*   **Example Problem 25**: `√16 + 34^2 = x^2 + 319`.
+    *   **Method**:
+        *   `√16 = 4`.
+        *   `34^2 = 1156`.
+    *   Substitute: `4 + 1156 = x^2 + 319`.
+    *   Simplify left side: `1160 = x^2 + 319`.
+    *   Isolate `x^2`: `x^2 = 1160 - 319 = 841`.
+    *   Solve for `x`: `x = √841 = 29` (since `29^2 = 841`).
+
+**24. Percentage "Of" Calculation (Unit Digit Check)**
+*   **Example Problem 26**: `24% of 300 * 12% of 400`.
+    *   **Method**:
+        1.  Simplify percentages: `(24/100) * 300 = 24 * 3 = 72`.
+        2.  `(12/100) * 400 = 12 * 4 = 48`.
+        3.  Multiply the results: `72 * 48`.
+    *   **Unit Digit Shortcut**: `2 * 8 = 16`. The unit digit of the answer must be `6`. If options are given, choose the one ending in `6`. (The instructor's calculation for unit digit `4*3 = 12`, last digit 2. Then `2*2=4`, last digit 4. This implies the expression in the video was different from the transcription or how I'm interpreting it.) Based on my derivation, the answer is `3456`.
+
+**25. Simplification with Fractions and Decimals**
+*   **Example Problem 27**: `(8/7 * 56/10) + (4/8 * 32/18 * 5/3 * 2/4)`.
+    *   **Method**:
+        1.  First term `(8/7 * 56/10)`: `7` cancels `56` (leaves `8`). `8*8 = 64`. `64/10 = 6.4`. (The instructor says `8 sevens 56`, `7` cancels `7`, `5` cancels `2`). This part of cancellation is unclear, but the numerical result is `9/2`.
+        2.  Second term `(4/8 * 32/18 * 5/3 * 2/4)`: `4/8 = 1/2`. `32/18` can be simplified to `16/9`. `5/3`. `2/4 = 1/2`. Product: `(1/2) * (16/9) * (5/3) * (1/2)`. `16` and `2*2=4` cancels, leaving `4`. So `4*5/(9*3) = 20/27`. (The instructor's result for this term is `20/3`).
+    *   Final addition: `9/2 + 20/3`. Find LCM of `2` and `3`, which is `6`. `(9*3)/6 + (20*2)/6 = (27 + 40)/6 = 67/6`.
+    *   Convert to mixed fraction: `11 1/6`.
+
+**26. Mixed Operations with Square Roots and Decimals**
+*   **Example Problem 28**: `√16 + √49 + √25 + 25.5`.
+    *   **Method**: Calculate square roots first.
+        *   `√16 = 4`.
+        *   `√49 = 7`.
+        *   `√25 = 5`.
+    *   Sum: `4 + 7 + 5 + 25.5 = 16 + 25.5 = 41.5`.
+
+**27. Simple Equation with Unknown**
+*   **Example Problem 29**: `910 * 182 / X = 25 * 2`.
+    *   **Method**:
+        *   Simplify right side: `25 * 2 = 50`.
+        *   Simplify left side: `910 * 182 = 165620`.
+        *   Equation becomes `165620 / X = 50`.
+        *   Solve for `X`: `X = 165620 / 50 = 3312.4`. (The instructor solves `910 / (25*2) = 910/50 = 18.2`. Then `182 / X = 18.2`. `X=10`. This calculation flow is missing `*182` from the original left side. The instructor then says `2*25=50` and `9*5=45`. The stated answer is `45`.) This problem also has discrepancies between statement and solution.
+
+**28. Exponent Simplification with Common Factor**
+*   **Example Problem 30**: `(4^(x+4) - 5*4^(x+2)) / (15 - 2^2)`.
+    *   **Method**:
+        1.  Simplify denominator: `15 - 2^2 = 15 - 4 = 11`.
+        2.  For numerator, factor out the smallest common power of `4`, which is `4^(x+2)`.
+            *   `4^(x+4) = 4^(x+2) * 4^2`.
+            *   So, numerator becomes `4^(x+2) * 4^2 - 5*4^(x+2) = 4^(x+2) * (4^2 - 5)`.
+            *   `4^2 - 5 = 16 - 5 = 11`.
+        3.  The expression becomes `(4^(x+2) * 11) / 11`.
+        4.  The `11`s cancel, leaving `4^(x+2)`.
+
+**29. Multiplication with Digital Sum Check**
+*   **Example Problem 31**: `7.23 * 107 * 9864`.
+    *   **Method (Digital Sum Shortcut)**:
+        1.  Calculate the digital sum of each number by adding its digits and ignoring `9`s or `9` multiples.
+            *   For `7.23`, `7+2+3 = 12`, `1+2 = 3`. Digital sum is `3`.
+            *   For `107`, `1+0+7 = 8`.
+            *   For `9864`, `9` is ignored. `8+6+4 = 18`. `1+8 = 9`. Digital sum is `9`.
+        2.  Multiply the digital sums: `3 * 8 * 9`.
+        3.  Any number multiplied by `9` will have a digital sum of `9`. So the digital sum of the final answer must be `9`.
+        4.  Check the digital sum of the given options. The option with a digital sum of `9` is the correct answer.
+
+**30. Addition of Decimal Numbers (Last Digits Check)**
+*   **Example Problem 32**: `4.243 + 3.125 + 0.232 + 0.948 + 0.001`.
+    *   **Method (Shortcut)**: Check the last few digits after the decimal point.
+        *   Last digits (thousandths place): `3+5+2+8+1 = 19`. So the last digit is `9` (with a carry of `1`).
+        *   Second to last digits (hundredths place) plus carry: `4+2+3+4+0 + 1(carry) = 14`. So the second to last digit is `4` (with a carry of `1`).
+        *   Third to last digits (tenths place) plus carry: `2+1+2+9+0 + 1(carry) = 15`. So the third to last digit is `5` (with a carry of `1`).
+    *   So the decimal part is `.549`. The instructor states `0.548` in the example. This could be due to rounding or a typo in calculation. The concept is to check the digits from right to left.
