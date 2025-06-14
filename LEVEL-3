@@ -1,0 +1,139 @@
+Level 3 of the CSS tutorial focuses on CSS units and the position property.
+
+### Units in CSS
+CSS uses units to define the size of elements. There are two main types of units: absolute units and relative units.
+
+**Absolute Units**
+Absolute units have a fixed value.
+*   **Pixels (px)**: This is the most frequently used absolute unit. One inch is approximately 2.54 cm, and it contains 96 pixels, indicating that a pixel is a very small unit of measurement. Pixels are commonly used to set properties like `font-size`. For example, a `font-size` of `1px` is extremely small and barely visible. Other absolute units include centimetres (cm), inches (in), and millimetres (mm), but pixels are the most common.
+
+**Relative Units**
+Relative units define sizes based on a relative reference, meaning their actual size can vary depending on the context, such as a parent element's property or the viewport size. The most popular relative units are percentage, em, and rem.
+
+*   **Percentage (%)**: This unit defines size relative to an element's parent object. For instance, setting a child element's `width` to `30%` means it will occupy 30% of its parent's width. This also applies to `margin` properties; a `margin-left` of `10%` would be 10% of the parent's width. If the parent's size changes, the child's size (or margin) will scale accordingly.
+
+*   **Em (em)**: The `em` unit is context-dependent.
+    *   For text-related properties (like `font-size`), `1em` is relative to the `font-size` of the **parent element**. So, if a parent's `font-size` is `10px`, a child's `font-size` set to `2em` would result in `20px`. Conversely, `0.5em` would be `5px`.
+    *   For other properties (like `width`), `1em` is relative to the `font-size` of the **element itself**. If an element's `font-size` is `20px`, a `width` of `5em` would be `100px` (`20px * 5`). It's crucial to remember this distinction, as `em` doesn't always refer to the parent's `font-size`.
+
+*   **Rem (rem)**: The `rem` (root em) unit is always relative to the `font-size` of the **root HTML element** (usually the `<html>` or `<body>` tag), not the direct parent. For example, if the root `font-size` is `16px` (a common browser default), a `width` of `5rem` would translate to `80px` (`5 * 16px`).
+
+*   **Viewport Height (vh) and Viewport Width (vw)**: These units are relative to the viewport (browser window) size.
+    *   `1vh` is 1% of the viewport's height. Setting an element's `height` to `50vh` means it will cover 50% of the visible browser window's height.
+    *   `1vw` is 1% of the viewport's width.
+
+### Position Property
+The `position` property in CSS controls how an element is placed within a document. It has four main possible values: `static`, `relative`, `absolute`, and `fixed`, with `sticky` being an additional useful value.
+
+*   **Top, Right, Bottom, Left Properties**: These properties are used in conjunction with position values (except `static`) to specify an element's offset from its normal position or its containing block. For example, `top: 20px` would move an element 20 pixels downwards from its top edge. `left: 10px` would move it 10 pixels to the right.
+
+*   **`static`**: This is the default position for all HTML elements. When an element has `position: static`, the `top`, `right`, `bottom`, `left`, and `z-index` properties have no effect. Elements flow according to the normal document flow.
+
+*   **`relative`**: When `position` is set to `relative`, the element is positioned relative to its normal position. Using `top`, `right`, `bottom`, or `left` will shift the element from where it *would normally be*. Other elements on the page will behave as if the relatively positioned element is still in its original place, potentially leading to overlapping. The `z-index` property can be used with `relative` positioning.
+
+*   **`absolute`**: An element with `position: absolute` is positioned relative to its closest positioned ancestor (an ancestor with `position` set to `relative`, `absolute`, `fixed`, or `sticky` – anything but `static`). If no such ancestor exists, it's positioned relative to the initial containing block (usually the `<body>` or browser window). Absolutely positioned elements are removed from the normal document flow, meaning their space is no longer reserved, and other elements will fill that gap. The `top`, `right`, `bottom`, `left`, and `z-index` properties apply.
+
+*   **`fixed`**: An element with `position: fixed` is positioned relative to the **browser window (viewport)**. It stays in the same place even when the page is scrolled. Fixed elements are also removed from the normal document flow. This is commonly used for navigation bars (navbars) or footers that should remain visible regardless of scrolling. The `top`, `right`, `bottom`, `left`, and `z-index` properties apply.
+
+*   **`sticky`**: This position is based on the user's scroll position. A sticky element behaves like `position: relative` until a certain scroll point is reached, after which it becomes `position: fixed`. For example, `position: sticky; top: 0px` would make an element stick to the top of the viewport once it reaches that position during scrolling. The `top`, `right`, `bottom`, `left`, and `z-index` properties apply.
+
+*   **`z-index`**: This property determines the stack order of positioned elements that overlap. Elements with a higher `z-index` value will appear on top of elements with a lower `z-index`. By default, all elements have a `z-index` of `0`. Positive values bring elements forward (on top), while negative values push them backward (behind). `z-index` only works on elements that are positioned (i.e., not `static`). It's analogous to the Z-axis in a 3D coordinate system.
+
+### Background Image
+CSS allows setting background images for elements.
+
+*   **`background-image`**: This property is used to specify an image as the background. The image's URL is provided within `url()`.
+*   **`background-size`**: This property controls how the background image scales to fit the element. Common values include:
+    *   **`cover`**: The image will cover the entire area of the element, possibly cropping parts of the image if its aspect ratio doesn't match the element's. It ensures no empty spaces. This is the most commonly used value.
+    *   **`contain`**: The image will be scaled to fit inside the element while maintaining its aspect ratio. If the image and element have different aspect ratios, there will be empty spaces, which might be filled by repeating the image.
+    *   **`auto`**: The default value, where the image retains its original size.
+*   **`background-repeat`**: This property controls whether and how a background image is repeated. Setting it to `no-repeat` prevents the image from tiling.
+
+### Practice Set 5
+Practice Set 5 involves creating a webpage layout with a header, footer, and a content area, and demonstrating the use of appropriate positioning, specifically `position: fixed`, for elements that should not move on scroll. It also involves using the `background-image` and `background-size: cover` properties for a hero section.
+The problem asks to:
+1.  Create an HTML structure with paragraphs and a `div`.
+2.  Give the `div` a `height`, `width`, and `background-image`, ensuring it's appropriately sized (using `background-size: cover`).
+3.  Position the `div` on the right side of the page using an appropriate position property (`position: absolute` for positioning relative to the page, then `position: fixed` to ensure it doesn't move on scroll).
+4.  Ensure the `div` does not move even on scroll.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Practice Set 5 - CSS Position</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    header {
+      top: 0;
+    }
+
+    footer {
+      bottom: 0;
+    }
+
+    .content {
+      padding: 80px 20px 60px 20px; /* space for fixed header & footer */
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .content p {
+      line-height: 1.6;
+    }
+
+    .fixed-box {
+      position: fixed;
+      top: 100px;
+      right: 20px;
+      width: 200px;
+      height: 200px;
+      background-image: url('https://via.placeholder.com/300');
+      background-size: cover;
+      background-repeat: no-repeat;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Fixed Header</h1>
+  </header>
+
+  <div class="content">
+    <h2>Welcome to the Practice Page</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum rutrum justo in tellus dictum, nec faucibus diam finibus.</p>
+    <p>Scroll down to test the fixed position of the box on the right. It should stay in place even as this content moves.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium posuere ex, nec tincidunt arcu rutrum ac. Vivamus sed accumsan nisl. Integer nec velit at elit iaculis porta. Proin accumsan sem quis justo egestas, ac pharetra justo condimentum. Proin pretium purus justo, sed blandit nulla gravida at. Vivamus quis libero in elit convallis eleifend.</p>
+    <p>More content to make the page scrollable... keep scrolling!</p>
+    <p>Keep scrolling down...</p>
+    <p>You're almost there...</p>
+    <p>End of content!</p>
+  </div>
+
+  <div class="fixed-box"></div>
+
+  <footer>
+    <p>My Fixed Footer</p>
+  </footer>
+
+</body>
+</html>
