@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traffic Light</title>
+  <style>
+    .traffic-light {
+      width: 100px;
+      height: 300px;
+      background-color: #333;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px auto;
+    }
+
+    
+
+    .red {
+      background-color: red;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      
+      transition: background-color 0.5s;
+    }
+    
+
+    .yellow {
+      background-color: yellow;
+    
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      
+      transition: background-color 0.5s;
+    }
+    
+
+    .green {
+      background-color: green;
+    
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    
+      transition: background-color 0.5s;
+    }
+    .light:hover {
+  transform: scale(1.1);
+  transition: transform 2s;
+}
+
+  </style>
+</head>
+<body>
+
+  <div class="traffic-light">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>
+
+</body>
+</html>
