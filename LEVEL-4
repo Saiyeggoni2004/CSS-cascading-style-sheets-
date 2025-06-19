@@ -1,0 +1,251 @@
+Level 4 of the CSS focuses on the Box Model in CSS. This section significantly increases the use of the "Inspect" tool in the browser to better understand and manipulate CSS properties.
+The core concept of the Box Model is that every element displayed on a web page, such as images, divs, spans, headings, paragraphs, or buttons, is ultimately rendered as a box. This model helps to visualise how elements occupy space and how their various properties affect their layout.
+The key components of the Box Model, as illustrated and explained, include:
+•
+Content Area: This is the innermost part of the box, where the actual content (like text or an image) resides. It has a specific height and width, determining the vertical and horizontal space the content occupies. By default, a div element will occupy the entire width of its parent container.
+•
+Padding: This is the space between the content area and the element's border. It can be applied to individual sides (e.g., padding-left, padding-right, padding-top, padding-bottom) using pixel units. A padding shorthand can be used to set all four sides with a single value or specific values in a clockwise order (top, right, bottom, left). In Chrome's inspect tool, padding is highlighted in green.
+### What CSS Does (Illustrative Example)
+CSS adds style to websites, giving them beauty and appeal. Without CSS, a website can appear "broken" or "ugly", lacking visual structure and appeal. For instance, inspecting the Netflix website and removing its CSS demonstrates how text can become very large or small, photos can appear disproportionate, buttons might look strange and grey, and overall the website appears "broken" compared to its original, well-styled version.
+
+### Ways to Write CSS
+1.  **Inline Styling:** CSS is written directly within the HTML tag using the `style` attribute.
+    *   **Example:** `<h1 style="color: red;">Hello From Apna College</h1>`. This would change the heading colour to red. You can also change it to green: `<h1 style="color: green;">Hello From Apna College</h1>`.
+2.  **Style Tag (Internal CSS):** CSS is written within `<style>` tags, typically placed inside the `<head>` section of the HTML document.
+    *   **Example:**
+        ```html
+        <head>
+            <style>
+                h1 {
+                    color: red;
+                }
+            </style>
+        </head>
+        <body>
+            <h1>Hello From Apna College</h1>
+        </body>
+        ```
+        This would make all `h1` headings red.
+3.  **External Style Sheet:** CSS is written in a separate `.css` file (e.g., `style.css`) and linked to the HTML document using the `<link>` tag in the `<head>` section.
+    *   **Example:**
+        *   In `style.css`: `h1 { color: red; }`.
+        *   In `index.html`: `<link rel="stylesheet" href="style.css">`.
+        *   This method is considered professional and is prioritised over inline or style tags. If an inline style is present, it will override external or internal styles.
+
+### CSS Properties and Their Values
+
+#### Colours
+*   **Named Colours:** Simple colour names can be used.
+    *   **Examples:** `red`, `green`, `blue`, `pink`, `black`, `white`, `teal`, `gray`, `brown`, `violet`, `yellow`, `yellowgreen`, `turquoise`, `tomato`, `skyblue`, `slategray`, `seagreen`, `purple`, `chartreuse`, `aliceblue`.
+*   **RGB (Red, Green, Blue) System:** Colours are defined by the intensity of red, green, and blue light, each ranging from 0 to 255.
+    *   **Example:** `rgb(255, 0, 0)` for pure red.
+    *   `rgb(0, 255, 0)` for pure green.
+    *   `rgb(255, 255, 0)` for yellow (red and green mixed).
+    *   Values can be adjusted to create shades, e.g., `rgb(200, 255, 0)` for a greenish-yellow.
+*   **RGBA (Red, Green, Blue, Alpha) System:** Adds an 'alpha' value (0 to 1) to RGB, controlling opacity (transparency).
+    *   **Example:** `rgba(255, 0, 0, 0.5)` for semi-transparent red.
+    *   `rgba(0, 255, 0, 0.25)` for very light green.
+    *   `rgba(0, 0, 255, 1)` for fully opaque dark blue.
+*   **Hexadecimal (Hex) System:** A shorthand for RGB, using 6 hexadecimal digits (0-9, A-F), prefixed with `#`.
+    *   **Example:** `#FF0000` for pure red.
+    *   `#00FF00` for pure green.
+    *   `#FFFF00` for yellow.
+    *   The values can be directly copied from colour pickers, e.g., `#03F4FC` for a specific blue shade.
+
+#### Text Properties
+*   **`color`:** Sets the foreground colour of elements like text, buttons, or links.
+    *   **Example:** `p { color: red; }` for red paragraph text. `button { color: brown; }` for brown button text.
+*   **`text-align`:** Aligns text horizontally within its container.
+    *   **Values:** `left`, `right`, `center`. In CSS3, `start` and `end` were added for multi-language support.
+    *   **Example:** `p { text-align: center; }` would centre a paragraph's text. `h1 { text-align: right; }` would align a heading to the right.
+*   **`text-decoration`:** Adds or removes lines on text.
+    *   **Values:** `underline`, `overline`, `line-through`, `none`.
+    *   **Example:** `a { text-decoration: none; }` removes the default underline from links. You can also set a `color` (e.g., `red underline`) or `style` (e.g., `blue wavy underline`, `dotted`, `double`, `dashed`) for the decoration.
+*   **`font-weight`:** Controls the boldness or lightness of text.
+    *   **Values:** `normal`, `bold`, `bolder`, `lighter`, or numeric values from `100` (lightest) to `900` (darkest).
+    *   **Example:** `h2 { font-weight: bold; }` or `h3 { font-weight: 250; }` for a specific lightness.
+*   **`font-family`:** Specifies the font style for text.
+    *   **Examples:** `Arial`, `Segoe UI`, `Times New Roman`. Generic font families like `serif`, `sans-serif`, `cursive`, `fantasy`, `monospace` are also mentioned.
+    *   Multiple font families can be listed as fallbacks, e.g., `font-family: Arial, Roboto, sans-serif;`.
+*   **`line-height`:** Controls the height of each line of text.
+    *   **Example:** `p { line-height: 50px; }` would add significant vertical space between lines in a paragraph.
+
+#### Box Model
+*   **`height` and `width`:** Define the dimensions of an element's content area.
+    *   **Example:** `div { height: 100px; width: 200px; }`.
+*   **`border`:** Sets the border around an element, with properties for width, style, and colour.
+    *   **Properties:** `border-width` (e.g., `2px`, `5px`, `10px`), `border-style` (e.g., `solid`, `dashed`, `dotted`, `double`), `border-color` (e.g., `black`, `brown`, `pink`, `red`, `green`).
+    *   **Shorthand:** `border: 2px solid brown;` combines width, style, and colour.
+    *   Individual sides can be targeted: `border-top`, `border-bottom`, `border-left`, `border-right`.
+*   **`border-radius`:** Rounds the corners of an element's border.
+    *   **Values:** Pixels (e.g., `15px`, `25px`) or percentage (e.g., `50%` for a perfect circle from a square).
+    *   **Example:** `div { border-radius: 50%; }` to make a square div circular.
+*   **`padding`:** Adds space *between* an element's content and its border.
+    *   **Individual Sides:** `padding-left`, `padding-right`, `padding-top`, `padding-bottom`.
+    *   **Example:** `div { padding-left: 25px; }`.
+    *   **Shorthand:** Can take one value (applies to all sides) or four values (top, right, bottom, left in clockwise order).
+    *   **Example:** `div { padding: 25px; }` (all sides) or `div { padding: 1px 2px 3px 4px; }` (top, right, bottom, left).
+*   **`margin`:** Adds space *outside* an element's border, separating it from other elements.
+    *   **Individual Sides:** `margin-left`, `margin-right`, `margin-top`, `margin-bottom`.
+    *   **Example:** `div { margin-top: 50px; }` to add space above a div.
+    *   **Shorthand:** Similar to padding, can take one value (all sides) or four values (top, right, bottom, left).
+    *   **Example:** `div { margin: 25px; }`.
+
+#### Display Property
+*   **`display`:** Controls how an element is rendered and how it interacts with other elements.
+    *   **`block`:** Takes up the full width available and starts on a new line (e.g., `div`, `h1`, `p`).
+        *   **Example:** Setting a button (normally inline) to `display: block;` will make it take full width and move to a new line.
+    *   **`inline`:** Takes up only as much width as necessary and does not start on a new line (e.g., `span`, `button`, `input`, `a` tags).
+        *   **Example:** Setting a div (normally block) to `display: inline;` will make it only take its content's width and allow other inline elements to be on the same line.
+    *   **`inline-block`:** Behaves like an `inline` element but allows setting `width`, `height`, and vertical `margin`/`padding` (which `inline` elements do not fully support).
+        *   **Example:** To have multiple divs (normally block) on the same line while still being able to control their dimensions and margins, set `display: inline-block;`.
+    *   **`none`:** Completely removes an element from the document flow; it takes up no space.
+        *   **Example:** `div { display: none; }` would make the div disappear and collapse its space, as if it never existed. This is different from `visibility: hidden;` which hides the element but still reserves its space.
+
+#### Units in CSS
+*   **Absolute Units (Fixed Values):**
+    *   **`pixels` (px):** The most commonly used unit for fixed sizes.
+        *   **Example:** `font-size: 25px;`, `height: 100px;`, `width: 200px;`.
+*   **Relative Units (Relative to other elements or viewport):**
+    *   **`percentage` (%):** Relative to an element's parent object.
+        *   **Example:** If a parent div has `width: 200px;`, a child div with `width: 10%` will have a width of `20px`.
+    *   **`em`:**
+        *   For text-related properties (`font-size`), it's relative to the `font-size` of the *parent* element.
+            *   **Example:** If parent has `font-size: 10px;`, child `font-size: 2em;` means `2 * 10px = 20px`.
+        *   For other properties (`width`, `height`), it's relative to the `font-size` of the *element itself*.
+            *   **Example:** If an element has `font-size: 20px;`, then `width: 5em;` means `5 * 20px = 100px`.
+    *   **`rem` (root em):** Always relative to the `font-size` of the root HTML element (usually `16px` by default in browsers).
+        *   **Example:** If root `font-size` is `16px`, then `width: 5rem;` means `5 * 16px = 80px`.
+    *   **`vh` (viewport height) and `vw` (viewport width):** Relative to 1% of the viewport's height or width, respectively.
+        *   **Example:** `height: 50vh;` means the element will take up 50% of the browser window's height.
+
+#### Positioning
+*   **`position`:** Sets how an element is positioned in a document. It works with `top`, `right`, `bottom`, `left`, and `z-index` properties.
+    *   **`static` (Default):** Elements are positioned according to the normal document flow. `top`, `right`, `bottom`, `left`, and `z-index` properties have no effect.
+    *   **`relative`:** Elements are positioned relative to their normal position. `top`, `right`, `bottom`, `left` properties will shift the element from its original place, but it still occupies its space in the document flow.
+        *   **Example:** `div { position: relative; top: 10px; left: 20px; }` will move the div 10px down and 20px right from where it *would have been* normally.
+    *   **`absolute`:** Elements are positioned relative to their *closest positioned ancestor* (an ancestor whose `position` is not `static`). If no such ancestor exists, it's relative to the initial containing block (usually the `<body>` element or browser window). The element is removed from the normal document flow, so other elements will behave as if it's not there.
+        *   **Example:** `div { position: absolute; top: 10px; left: 20px; }` will position the div 10px from the top and 20px from the left of its positioned parent or the `<body>`.
+    *   **`fixed`:** Elements are positioned relative to the browser window and remain in that position even when the page is scrolled.
+        *   **Example:** `div { position: fixed; bottom: 0; right: 10px; }` would create a fixed element always stuck to the bottom-right of the screen, useful for footers or navigation bars.
+    *   **`sticky`:** Behaves like `relative` until a certain scroll position is reached, then it becomes `fixed`.
+        *   **Example:** `div { position: sticky; top: 0; }` would make the div stick to the top of the viewport once it reaches that position during scrolling.
+    *   **`z-index`:** Controls the stacking order of overlapping positioned elements. Higher values are placed on top.
+        *   **Example:** If `div1` has `z-index: 1;` and `div2` has `z-index: 0;`, `div1` will appear above `div2` if they overlap. Negative values place elements further back. This property only works on positioned elements (not `static`).
+
+#### Flexbox (Flexible Box Layout)
+Flexbox is for arranging items in a single row or column.
+*   **Flex Container:** An element becomes a flex container when `display: flex;` is applied to it.
+    *   **`flex-direction`:** Sets the main axis (direction) for flex items.
+        *   **Values:** `row` (default, left-to-right main axis), `row-reverse` (right-to-left main axis), `column` (top-to-bottom main axis), `column-reverse` (bottom-to-top main axis).
+    *   **`justify-content`:** Aligns flex items along the *main axis*.
+        *   **Values:** `flex-start` (aligns to the start of the main axis), `flex-end` (aligns to the end), `center` (aligns to the centre), `space-around` (distributes space around items, with half-space at ends), `space-between` (distributes space evenly between items, no space at ends), `space-evenly` (distributes space evenly around and between items).
+        *   **Example:** `justify-content: space-evenly;` to distribute navigation bar items with equal space.
+    *   **`align-items`:** Aligns flex items along the *cross axis* (perpendicular to the main axis).
+        *   **Example:** `align-items: center;` to vertically centre items when `flex-direction: row;`.
+    *   **`align-content`:** Aligns *lines* of content along the cross-axis, useful when `flex-wrap` is active.
+        *   **Values:** `flex-start`, `flex-end`, `center`, `space-around`, `space-between`, `space-evenly`.
+*   **Flex Items:** The direct children of a flex container.
+    *   **`align-self`:** Overrides `align-items` for an *individual* flex item, aligning it along the cross axis. This has higher priority.
+        *   **Example:** `div { align-self: flex-end; }` to move a single div to the bottom of its flex container while others remain aligned differently.
+    *   **`flex-grow`:** Specifies how much a flex item will grow relative to the rest of the flex items in the container when there's *extra space*.
+        *   **Example:** If `div1` has `flex-grow: 1;` and `div2` has `flex-grow: 2;`, `div2` will take up twice as much extra space as `div1`.
+    *   **`flex-shrink`:** Specifies how much a flex item will shrink relative to the rest of the flex items in the container when there's *not enough space*.
+        *   **Example:** `div { flex-shrink: 0; }` prevents a div from shrinking, maintaining its specified width even if the container is too small. `flex-shrink: 2;` makes it shrink at double the rate of others.
+    *   **`flex-wrap`:** Controls whether flex items should wrap to the next line or stay on one line.
+        *   **Values:** `nowrap` (default), `wrap`, `wrap-reverse`.
+        *   **Example:** `div { flex-wrap: wrap; }` to make items wrap to the next line when space runs out.
+
+#### Background Images
+*   **`background-image`:** Sets an image as the background of an element.
+    *   **Example:** `div { background-image: url('cat_photo.jpg'); }`.
+*   **`background-size`:** Specifies the size of the background image.
+    *   **Values:** `cover` (scales image to cover the entire container, possibly cropping), `contain` (scales image to fit within the container, showing the full image, possibly leaving empty space which might repeat), `auto` (default).
+    *   **Example:** `div { background-size: cover; }` to ensure the image covers the div completely.
+*   **`background-repeat`:** Controls whether the background image repeats.
+    *   **Value:** `no-repeat` to prevent repetition.
+
+#### Media Queries (for Responsiveness)
+*   **`@media` Rule:** Applies CSS rules conditionally based on characteristics of the device or viewport (e.g., width, height, orientation).
+    *   **Example:**
+        ```css
+        @media (max-width: 300px) {
+            div {
+                background-color: green; /* Green when viewport width is less than 300px */
+            }
+        }
+        @media (min-width: 300px) and (max-width: 400px) {
+            div {
+                background-color: pink; /* Pink when viewport width is between 300px and 400px */
+            }
+        }
+        @media (min-width: 400px) and (max-width: 600px) {
+            div {
+                background-color: red; /* Red when viewport width is between 400px and 600px */
+            }
+        }
+        @media (min-width: 600px) {
+            div {
+                background-color: blue; /* Blue when viewport width is greater than 600px */
+            }
+        }
+        ```
+        This demonstrates how a div's background colour can change based on screen width, making the design responsive.
+
+#### Transitions (for Smooth Effects)
+*   **`transition`:** Creates smooth changes when an element's state or property changes (e.g., on hover).
+    *   **Pseudo-classes:** `:hover` (when mouse cursor is over an element), `:active` (when an element is clicked and held).
+    *   **Properties:** `transition-property` (which CSS property to animate, e.g., `background-color`, `font-size`, or `all`), `transition-duration` (how long the animation takes, e.g., `2s` for 2 seconds), `transition-timing-function` (speed curve, e.g., `ease-in` for slow start, `linear` for constant speed, `steps` for discrete steps), `transition-delay` (delay before animation starts, e.g., `1s` for 1 second).
+    *   **Shorthand:** `transition: all 2s ease-in 1s;` (property, duration, timing function, delay).
+    *   **Example:** On hover, a div's `background-color` and `font-size` change smoothly over 2 seconds with an `ease-in` timing function.
+
+#### Transforms (for Manipulating Elements)
+*   **`transform`:** Applies 2D or 3D transformations to an element.
+    *   **`rotate()`:** Rotates an element.
+        *   **Values:** Degrees (e.g., `45deg`, `90deg`, `180deg`, `360deg`). Can also specify `rotateX()`, `rotateY()`, `rotateZ()` for 3D rotation.
+        *   **Example:** `div { transform: rotate(45deg); }`. Can be applied on hover with a transition for an animated rotation.
+    *   **`scale()`:** Resizes an element.
+        *   **Values:** A single number for uniform scaling (e.g., `2` for double size, `0.5` for half size) or two numbers for `scaleX()` and `scaleY()` (e.g., `scale(2, 1)` for double width, original height).
+        *   **Example:** `div { transform: scale(2); }` makes the div twice its original size.
+    *   **`translate()`:** Moves an element from its original position.
+        *   **Values:** Pixels for `translateX()` (horizontal movement), `translateY()` (vertical movement), or `translate(x, y)` for both.
+        *   **Example:** `div { transform: translate(50px, 80px); }` moves the div 50px right and 80px down.
+    *   **`skew()`:** Distorts an element by tilting it along the X and/or Y axis.
+        *   **Values:** Degrees (e.g., `30deg`, `45deg`, `90deg`).
+        *   **Example:** `div { transform: skew(30deg); }` would tilt the div by 30 degrees.
+
+#### Animations (for Advanced Effects)
+*   **`@keyframes` Rule:** Defines the intermediate steps (or frames) of an animation. It specifies styles at different stages (percentages) of the animation, from `0%` (from) to `100%` (to).
+    *   **Example:**
+        ```css
+        @keyframes colorAnimate {
+            from { background-color: aquamarine; } /* 0% */
+            50% { background-color: blue; }     /* Middle stage */
+            to { background-color: red; }        /* 100% */
+        }
+        ```
+        This defines an animation named `colorAnimate` that transitions background colour through three stages.
+*   **`animation` properties:** Apply the defined `@keyframes` animation to an element.
+    *   **Properties:**
+        *   `animation-name`: Name of the `@keyframes` rule (e.g., `colorAnimate`, `spinAnimate`).
+        *   `animation-duration`: How long one cycle of the animation takes (e.g., `3s`, `1s`, `0.25s`).
+        *   `animation-timing-function`: Speed curve (e.g., `ease-in`, `linear`, `steps`, `ease-in-out`).
+        *   `animation-delay`: Delay before the animation starts (e.g., `1s`, `0s`).
+        *   `animation-iteration-count`: Number of times the animation should play (e.g., `5`, `infinite` for continuous loop).
+        *   `animation-direction`: Whether the animation should play forward, backward, or alternate.
+            *   **Values:** `normal`, `reverse`, `alternate`, `alternate-reverse`.
+    *   **Shorthand:** `animation: spinAnimate 1s ease-in-out infinite;` (name, duration, timing function, iteration count).
+    *   **Example (Loader):** Creating a spinning loader by rotating a circular div from 0 to 360 degrees infinitely.
+
+### Practical Application Examples
+*   **Creating a Navbar:** Demonstrates arranging elements (logo, search bar, links, buttons) horizontally using `display: flex;` and `justify-content: space-evenly;`.
+*   **Centering a Div:** Centring one div inside another using Flexbox: `display: flex; justify-content: center; align-items: center;` on the outer (parent) div.
+*   **Building a Loader:** Uses `border-radius: 50%;` for a circular shape, individual `border-top` to create a partial border effect, and `animation: rotate(0deg) to rotate(360deg) infinite;` for continuous spinning.
+*   **Cloning a Website (Amazon.com):** A comprehensive project demonstrating the application of multiple CSS properties to replicate parts of a well-known website's layout, including its header, navigation, hero section, product boxes, and footer. This includes specific styling for fonts, colours, spacing, and responsive behaviour.
+*   **Traffic Light Problem (Homework):** An example problem requiring the creation of a rectangular box containing three coloured circles (red, yellow, green) stacked vertically, which can be achieved using various CSS properties learned.
+
+
+
+
+
+                                                              TRAFFIC LIGHT 
